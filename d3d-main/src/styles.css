@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul{
+  list-style: none;
+  margin-bottom: 0px;
+  padding-left: 0px !important;
+}
+body{
+  font-family: 'Inter', sans-serif;
+  background: #0B0B0B;
+  overflow-x: hidden;
+}
+.h-height-100{
+  height: 100%;
+}
+@media only screen and (max-width: 660px) and (min-width:300px){
+  .application_page.h-height-100 {
+     height: 100% !important;
+  }
+}

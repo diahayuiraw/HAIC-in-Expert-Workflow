@@ -1,0 +1,50 @@
+<div class="asset-download-container">
+    <!-- Custom dropdown for scale -->
+    <div class="custom-dropdown" (click)="toggleScaleDropdown()">
+      <div class="custom-dropdown-selected">
+        {{ selectedScale }}
+        <span class="arrow" [ngClass]="{'rotated': isScaleDropdownOpen}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="8" viewBox="0 0 15 8" fill="none">
+            <path d="M1 1L8 6.5L14.5 1" stroke="white"/>
+          </svg>
+        </span>
+      </div>
+      <div class="custom-dropdown-menu" *ngIf="isScaleDropdownOpen">
+        <div class="custom-dropdown-item" *ngFor="let scale of scaleOptions" (click)="selectScale(scale)">
+          {{ scale }}
+          <!-- Show checkmark if the item is selected -->
+          <span *ngIf="scale === selectedScale" class="checkmark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none">
+              <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Custom dropdown for format -->
+    <div class="custom-dropdown" (click)="toggleFormatDropdown()">
+      <div class="custom-dropdown-selected">
+        {{ selectedFormat }}
+        <span class="arrow" [ngClass]="{'rotated': isFormatDropdownOpen}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="8" viewBox="0 0 15 8" fill="none">
+            <path d="M1 1L8 6.5L14.5 1" stroke="white"/>
+          </svg>
+        </span>
+      </div>
+      <div class="custom-dropdown-menu" *ngIf="isFormatDropdownOpen">
+        <div class="custom-dropdown-item" *ngFor="let format of formatOptions" (click)="selectFormat(format)">
+          {{ format }}
+          <!-- Show checkmark if the item is selected -->
+          <span *ngIf="format === selectedFormat" class="checkmark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none">
+              <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Download button -->
+    <button class="download-button" (click)="downloadAllAssets()">Download all assets</button>
+  </div>

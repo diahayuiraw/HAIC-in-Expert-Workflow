@@ -1,0 +1,22 @@
+[
+    {
+      "id": 1,
+      "componentName": "CardA",
+      "files": {
+        "css": "cardA.component.css",
+        "html": "cardA.component.html",
+        "ts": "cardA.component.ts",
+        "specTs": "cardA.component.spec.ts"
+      }
+    },
+    {
+      "id": 2,
+      "componentName": "CardB",
+      "files": {
+        "css": "cardB.component.css",
+        "html": "cardB.component.html",
+        "ts": "cardB.component.ts",
+        "specTs": "cardB.component.spec.ts"
+      }
+    }
+  ]

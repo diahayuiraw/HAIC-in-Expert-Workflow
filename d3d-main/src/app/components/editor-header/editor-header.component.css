@@ -1,0 +1,212 @@
+.top_header_tool {
+  background: #333333;
+  width: 100%;
+  height: 50px;
+  flex-shrink: 0;
+  padding: 0px 15px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.header_title>h4 {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 0;
+  display: inline-flex; /* Aligns the icon and button horizontally */
+  align-items: center;
+  cursor: pointer;
+}
+
+.full_column {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.column_right>ul>li {
+  display: inline-block;
+  margin-left: 10px;
+}
+button.regenarate {
+  border-radius: 6px;
+  border: 1px solid #999;
+  background: #333333;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+}
+
+button.regenarate>span {
+  margin-right: 8px;
+}
+.dropdown-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+}
+.menu-item-text {
+  display: inline-block;
+  font-size: 14px;
+}
+.checkmark {
+  margin-left: 10px; /* Add spacing between the text and checkmark */
+  display: flex;
+  align-items: center;
+}
+.dropdown-item img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+.column_right .try-again {
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  border: none;
+}
+
+.column_right .try-again:hover {
+  background-color: #0056b3;
+}
+
+.top_header_tool {
+  background: #333333;
+  width: 100%;
+  height: 50px;
+  flex-shrink: 0;
+  padding: 0px 15px;
+  border-radius: 10px 10px 0px 0px;
+  position: relative; /* Required for absolute positioning within this container */
+}
+
+.column_right {
+  position: absolute;
+  top: 10px; /* Adjust this value if needed */
+  right: 15px; /* Align the button to the right */
+}
+
+.column_right .try-again {
+  background-color: transparent; /* Transparent background */
+  color: white; /* White text */
+  border-radius: 0px;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  border: 0px solid white; /* White border */
+}
+
+.column_right .try-again:hover {
+  background-color: rgba(255, 255, 255, 0); /* Slight white transparency on hover */
+  color: rgba(255, 255, 255, 0); /* Maintain white text on hover */
+  border: 0px solid white; /* White border on hover */
+}
+
+span img {
+  max-width: 100%; /* Ensures the image does not exceed the container's width */
+  height: auto; /* Maintain the image's aspect ratio */
+  object-fit: contain; /* Ensure the image scales while maintaining its aspect ratio */
+  display: block; /* Removes any inline space below the image */
+}
+/*--------------------popup-----------------*/
+
+.iot_container {
+  display: inline-flex;
+  padding: 6px 7px 7px 14px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 36px;
+  border-radius: 10px;
+  background: #FFF;
+}
+
+.inner_iot_container {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  justify-content: space-around;
+}
+
+.iot_box_text {
+  color: #000;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.column_left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header_title {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header_icon {
+  display: inline-flex;
+  align-items: center;
+}
+.framework-toggle {
+  border: 2px solid #999;
+  border-radius: 6px;
+  background: #333333;
+  color: #FFF;
+  padding: 8px 8px;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.framework-toggle.active {
+  background: #007bff23; /* Active state background */
+  border: 2px solid #007bff; /* Active state border */
+  color: white;
+}
+
+.framework-toggle:hover {
+  background-color: #555; /* Hover state for inactive button */
+}
+
+.try-again {
+  background-color: transparent;
+  color: white;
+  border-radius: 6px;
+  padding: 8px 24px 8px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+.try-again:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Slight white transparency on hover */
+  color: white;
+}
+
+.generate-text {
+  padding: 8px; 
+  font-family: Inter;
+  font-size: 12px;
+  color: white;
+  display: inline-block; /* Ensure it's inline with the button */
+}

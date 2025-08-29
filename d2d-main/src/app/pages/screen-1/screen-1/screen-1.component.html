@@ -1,0 +1,55 @@
+<div class="application_page h-height-100">
+  <div class="application_inner_page h-height-100">
+    <div class="container-fluid pl-0 pr-0 h-height-100">
+      <div class="row h-height-100">
+        <div class="col-xl-2 col-lg-3 col-md-6 col-12 height-100 pr-3">
+          <div class="side_bars_wraper">
+            <sidebar></sidebar>
+            <div class="sidebar-main-section">
+              <components-ready-dev-select></components-ready-dev-select>
+              <div class="mt-11">
+                <search-bar></search-bar>
+              </div>
+              <div class="option_list">
+                <div class="inner_option_list">
+                  <ul>
+                    <li *ngFor="let data of jsonData">
+                      <a href="javascript:void(0)" 
+                         [ngClass]="{'active': data.class === 'active'}" 
+                         (click)="onItemClick(data)">
+                        {{data.name}}
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-12 pl-3 pr-3">
+          <div class="full_wraper">
+            <div class="box-container">
+              <figma-header></figma-header>
+              <div class="preview_image_box">
+                <div class="inner_preview_image_box">
+                  <img [src]="selectedPreviewImage" alt="Preview Image" *ngIf="selectedPreviewImage">
+                </div>
+              </div>
+            </div>
+            <div class="bottom_tab_section">
+              <assets-anatomy-specifications></assets-anatomy-specifications>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-5 col-md-12 col-12 pl-3">
+          <div class="full_edtor_container">
+            <editor-header></editor-header>
+              <div class="page_name" style="min-height: 1000px;">
+              <iframe src="https://app.droxy.ai/guest-agent/66afb8395f89c09db6e2532a" width="100%" height="100%" style="min-height: 780px; border: none;"></iframe>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="https://api.useberry.com/integrations/liveUrl/scripts/useberryScript.js"></script>

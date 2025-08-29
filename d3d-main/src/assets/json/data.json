@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "name": "Card Custom A",
+    "class": "active",
+    "imgSrc": "./assets/img/CardCustomA.png"
+  },
+  {
+    "id": 2,
+    "name": "Card Custom B",
+    "class": "",
+    "imgSrc": "./assets/img/white_board.png"
+  }
+
+]

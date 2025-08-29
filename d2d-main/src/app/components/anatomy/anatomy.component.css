@@ -1,0 +1,40 @@
+.anatomy-content {
+    padding: 20px;
+    background-color: #333333;
+    border-radius: 10px;
+    color: #FFF;
+    font-family: Inter, sans-serif;
+  }
+  
+  .anatomy-content h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .anatomy-content p {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .anatomy-image-box {
+    border-radius: 10px;
+    background: rgba(217, 217, 217, 0.30);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid rgba(247, 247, 247, 0.50);
+    height: 200px; /* Adjust this height to control the box size */
+    width: 100%; /* Full width of the container */
+  }
+  
+  .anatomy-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* This ensures the image covers the entire box while maintaining its aspect ratio */
+    border-radius: 10px;
+  }

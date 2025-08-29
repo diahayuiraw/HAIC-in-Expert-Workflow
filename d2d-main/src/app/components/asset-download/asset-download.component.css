@@ -1,0 +1,74 @@
+.asset-download-container {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .custom-dropdown {
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .custom-dropdown-selected {
+    background-color: #222;
+    padding: 10px 20px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .custom-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    border: 1px solid #444;
+    border-radius: 5px;
+    width: 100%;
+    z-index: 100;
+  }
+  
+  .custom-dropdown-item {
+    padding: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .custom-dropdown-item:hover {
+    background-color: #444;
+  }
+  
+  .arrow {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .rotated {
+    transform: rotate(180deg);
+  }
+  
+  .checkmark {
+    margin-left: 10px;
+  }
+  
+  .download-button {
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 15px;
+  }
+  
+  .download-button:hover {
+    background-color: #666;
+  }

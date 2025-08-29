@@ -1,0 +1,120 @@
+<div class="application_page h-height-100">
+  <div class="application_inner_page h-height-100">
+    <div class="container-fluid pl-0 pr-0 h-height-100">
+      <div class="row h-height-100">
+        <div class="col-xl-2 col-lg-3 col-md-6 col-12 height-100 pr-3">
+          <div class="side_bars_wraper">
+            <sidebar></sidebar>
+            <div class="sidebar-main-section">
+              <components-ready-dev-select></components-ready-dev-select>
+              <div class="mt-11">
+                <search-bar></search-bar>
+              </div>
+              <div class="option_list">
+                <div class="inner_option_list">
+                  <ul>
+                    <li *ngFor="let data of figmaData; let i = index">
+                      <a [ngClass]="{'active': i === active}" (click)="findFigma(i)">
+                        {{ data.name }}
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-12 pl-3 pr-3">
+          <div class="full_wraper">
+            <div class="box-container">
+              <figma-header></figma-header>
+              <div class="preview_image_box">
+                <div class="inner_preview_image_box">
+                  <img [src]="figmaData[active].image_url" alt="Preview Image" class="preview-img">
+                </div>
+              </div>
+            </div>
+            <div class="bottom_tab_section">
+              <assets-anatomy-specifications></assets-anatomy-specifications>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-5 col-md-12 col-12 pl-3">
+          <div class="full_edtor_container">
+
+            <editor-header [showRegenerateButton]="showRegenerateButton" (regenerate)="onRegenerateClick()"></editor-header>
+            @if(codeArray==1){
+            <div class="page_name">
+              <ul class="tabs">
+                @if(SelectedCode=='Angular'){
+                <li><a href="javascript:void(0)" [class.active]="selectedTab === 'css'"
+                    (click)="selectTab('css')">css</a></li>
+                <li><a href="javascript:void(0)" [class.active]="selectedTab === 'html'"
+                    (click)="selectTab('html')">html</a></li>
+                <li><a href="javascript:void(0)" [class.active]="selectedTab === 'module'"
+                    (click)="selectTab('module')">ts</a></li>
+                }
+                @else if(SelectedCode=='React js'){
+                <li><a href="javascript:void(0)" [class.active]="selectedTab === 'css'"
+                    (click)="selectTab('css')">css</a></li>
+                <li><a href="javascript:void(0)" [class.active]="selectedTab === 'js'"
+                    (click)="selectTab('js')">jsx</a></li>
+                }
+              </ul>
+              <span class="copy">
+                <img src="./assets/img/folder-download.svg" alt="">
+              </span>
+            </div>
+          }
+          @if(codeArray==1){
+            <div class="editor-areas">
+              @if(SelectedCode=='Angular'){
+              <div *ngIf="selectedTab === 'css'">
+                <editor></editor>
+              </div>
+              <div *ngIf="selectedTab === 'html'">
+                <editor-html></editor-html>
+              </div>
+              <div *ngIf="selectedTab === 'ts'">
+                <editor-ts></editor-ts>
+              </div>
+              <div *ngIf="selectedTab === 'module'">
+                <editor-module-ts></editor-module-ts>
+              </div>
+              }
+              @else if(SelectedCode=='React js'){
+              <div *ngIf="selectedTab === 'css'">
+                <editor></editor>
+              </div>
+              <div *ngIf="selectedTab === 'js'">
+                <app-editor-js></app-editor-js>
+              </div>
+              }
+            </div>
+          }
+            @if(codeArray==0){
+              <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+                <button class="regenarate" [disabled]="loading" (click)="onCodeGenerate()">
+                  <ng-container *ngIf="!loading">
+                    <span>
+                      <img src="./assets/img/sparkle.svg" alt="">
+                    </span>
+                    Generate Code
+                  </ng-container>
+                  <ng-container *ngIf="loading">
+                    <div class="spinner-text">
+                      <div class="spinner"></div>
+                      <span>{{ loadingText }}</span>
+                    </div>
+                  </ng-container>
+                </button>
+              </div>
+        
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="https://api.useberry.com/integrations/liveUrl/scripts/useberryScript.js"></script>

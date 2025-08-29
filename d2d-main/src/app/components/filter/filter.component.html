@@ -1,0 +1,51 @@
+<div class="filter_wrapers">
+    <div class="filter_box" (click)="toggleRotation()">
+        <div class="inner_filter_box">
+            <span>Filter</span>
+            <span [ngClass]="{'rotated': isRotated}" class="arrow filter_icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="8" viewBox="0 0 15 8" fill="none">
+              <path d="M1 1L8 6.5L14.5 1" stroke="white"/>
+            </svg>
+        </span>
+        </div>
+    </div>
+    <div class="drop_down_box" *ngIf="isRotated">
+        <div class="inner_drop_down_box">
+            <div class="check_row">
+                <div class="main_inner_check_row margin_10">
+                    <h4>
+                        Version
+                    </h4>
+                    <div class="check_box_row">
+                        <label class="container-checkbox">Angular 17
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
+                        
+                    <label class="container-checkbox">React 
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                  </label>
+
+                    </div>
+                </div>
+                <div class="main_inner_check_row">
+                    <h4>
+                        Design System
+                    </h4>
+                    <div class="check_box_row">
+                        <label class="container-checkbox">Material Design System
+                      <input type="checkbox" checked="checked">
+                      <span class="checkmark"></span>
+                    </label>
+                        <label class="container-checkbox">Other Design System
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
